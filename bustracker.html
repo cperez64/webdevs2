@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>jQuery.parseXML demo</title>
+  <title>Bus Tracker</title>
   <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
 
   <style type="text/css">
@@ -21,7 +21,7 @@
 </head>
 <body>
   
-<h2>Bus Tracker</h2>
+<h2>Track your bus!</h2>
 
 <select name="Stops" id="stopChoice">
   <option value="8417">Western: North</option>
@@ -61,7 +61,7 @@
               $("#output").append("<br><h2>Bus Info:</h2>");
              
               $.each(data["bustime-response"]["prd"], function(i,v) {
-                  $("#output").append("<h3>Direction: " + v.rtdir + "</h3><h3>Arrival: " + v.prdtm + "</h3>" + 
+                  $("#output").append("<h3>Direction: " + v.rtdir + "</h3><h3>Minutes away: " + v.prdctdn + "</h3>" + 
                   "<h3>Distance: " + v.dstp + " feet</h3><h3>Bus Number: " + v.vid + "</h3><br>");
               });
 
